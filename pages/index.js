@@ -17,7 +17,10 @@ export default function Home() {
         <Navigation />
         <header className='header'>
           <h4 className='noti'>Notifications</h4>
-          <h4 className='msg'>Messages</h4>
+          <div className='underline'>
+            <h4 className='msg'>Messages <sup>2</sup></h4>
+          </div>
+
         </header>
         <body>
           <div className='myDiv'>
@@ -65,11 +68,18 @@ export default function Home() {
           </div>
         </body>
         <footer>
-          <FontAwesomeIcon icon="fa-solid fa-house" className='houseIcon' />
+          {/* <FontAwesomeIcon icon="fa-solid fa-house" className='houseIcon' />
           <FontAwesomeIcon icon="fa-regular fa-compass" className='compassIcon' />
           <FontAwesomeIcon icon="fa-solid fa-plus" className='plusIcon' />
-          <FontAwesomeIcon icon="fa-regular fa-comment-dots" className='msgIcon' />
-          <FontAwesomeIcon icon="fa-solid fa-bell" className='notiIcon' />
+          <FontAwesomeIcon icon="fa-regular fa-comment-dots" className='msgIcon' /> */}
+          {/* <FontAwesomeIcon icon="fa-solid fa-bell" className='notiIcon'/> */}
+          {/* <FontAwesomeIcon icon="fa-solid fa-circle-2" /> */}
+          <span id="span1" ><FontAwesomeIcon icon="fa-solid fa-house" className='houseIcon' /></span>
+          <span id="span1" ><FontAwesomeIcon icon="fa-regular fa-compass" className='compassIcon' /></span>
+          <span id="span1" > <FontAwesomeIcon icon="fa-solid fa-plus" className='plusIcon' /></span>
+          <span id="span1" > <FontAwesomeIcon icon="fa-regular fa-comment-dots" className='msgIcon' /></span>
+          <span id="span2" ><FontAwesomeIcon icon="fa-solid fa-bell" className='notiIcon' /><sup>2</sup></span>
+
         </footer>
       </div>
     </div>
@@ -93,21 +103,29 @@ const styles = {
         /* text-align: center; */
         background-color: white;
         padding-bottom: 10px;
-        
+        /* border-bottom:2px solid #0080ff; */
         & .noti{
-            width: 50%;
+            width: 45%;
             text-align: end;
         }
-        & .msg{
-            width: 50%;
+        & .underline{
+          margin-left: 4%;
+          width: 45%;
+          border-bottom:2px solid #0080ff;
+          margin-bottom: -10px;
+          & .msg{
             padding-left: 40px;
-            /* text-decoration: underline blue; */
-            /* border-bottom: #0080ff; */
-            
+            & sup{
+              color: red;
+              /* font-weight: bold; */
+            } 
+          }
         }
+        
+        
     }
     body{
-      box-shadow: inset 0px 14px 8px -10px #CCC;
+      box-shadow: inset 0px 9px 8px -10px #CCC;
       padding-top: 20px;
       .myDiv{
       display: flex;
@@ -171,21 +189,39 @@ const styles = {
       height: auto;
       display: flex;
       margin-bottom: 0px;
-      margin-top: 560px;
+      /* margin-top: 560px; */
+      margin-top: 545px;
       background-color: white;
       padding: 15px 0px;
       box-shadow: inset 0px 11px 8px -10px #CCC;
         /* inset 0px -11px 8px -10px #CCC;  */
       
-      & .houseIcon,.compassIcon, .plusIcon, .msgIcon{
+      /* & .houseIcon,.compassIcon, .plusIcon, .msgIcon{
         color:#a6a6a6;
         width: 20%;
         font-size: 1.5rem;
-      }
-      & .notiIcon{
+      } */
+      & #span1{
+        color:#a6a6a6;
         width: 20%;
         font-size: 1.5rem;
+        text-align: center;
       }
+      & #span2{
+        
+        width: 20%;
+        font-size: 1.5rem;
+        text-align: center;
+        & sup{
+          color: orange;
+          font-weight: bold;
+        }
+      }
+      /* & .notiIcon{
+        width: 20%;
+        font-size: 1.5rem;
+        margin-top: 0;
+      } */
      
     }
 
