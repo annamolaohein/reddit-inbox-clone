@@ -100,21 +100,24 @@ const styles = {
     & .header{
         display: flex;
         width: 100%;
+        padding: 0 5%;
         /* text-align: center; */
         background-color: white;
         padding-bottom: 10px;
+        text-align: center;
         /* border-bottom:2px solid #0080ff; */
         & .noti{
-            width: 45%;
+            width: 50%;
             text-align: end;
+           
         }
         & .underline{
-          margin-left: 4%;
-          width: 45%;
+          margin-left: 3%;
+          width: 50%;
           border-bottom:2px solid #0080ff;
           margin-bottom: -10px;
           & .msg{
-            padding-left: 40px;
+            /* padding-left: 40px; */
             & sup{
               color: red;
               /* font-weight: bold; */
@@ -190,7 +193,7 @@ const styles = {
       display: flex;
       margin-bottom: 0px;
       /* margin-top: 560px; */
-      margin-top: 545px;
+      margin-top: 547px;
       background-color: white;
       padding: 15px 0px;
       box-shadow: inset 0px 11px 8px -10px #CCC;
